@@ -63,7 +63,7 @@ a {
   .site-navbar .site-navigation .site-menu {
     margin-bottom: 0; }
     .site-navbar .site-navigation .site-menu .active > a span {
-      background: #007bff;
+      background: #007bff; /*Active bg color*/
       color: #fff;
       border-radius: 30px;
       display: inline-block;
@@ -86,7 +86,7 @@ a {
           transition: .3s all ease;
           border-radius: 30px; }
         .site-navbar .site-navigation .site-menu > li > a:hover > span {
-          background: #007bff;
+          background: #007bff; /*Hover bg color*/
           color: #fff;
           border-radius: 30px;
           display: inline-block; }
@@ -324,17 +324,7 @@ a {
         .site-mobile-menu .site-nav-wrap[data-class="social"] > li:first-child a {
           padding-left: 15px !important; }
   
-/*Misc*/
-#header-image {
-  height: 75%;
-  width: 100%;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat; }
 
-body {
-  background-color: black;
-}
 /*Roadmap*/
 body{margin-top:20px;}
 .timeline-steps {
@@ -354,7 +344,7 @@ body{margin-top:20px;}
     .timeline-steps .timeline-step:not(:last-child):after {/*First half dots*/
         content: "";
         display: block;
-        border-top: .25rem dotted #3b82f6;
+        border-top: .25rem dotted white;
         width: 3.46rem;
         position: absolute;
         left: 7.5rem;
@@ -363,11 +353,20 @@ body{margin-top:20px;}
     .timeline-steps .timeline-step:not(:first-child):before {/*Second half dots*/
         content: "";
         display: block;
-        border-top: .25rem dotted #3b82f6;
+        border-top: .25rem dotted white;
         width: 3.8125rem;
         position: absolute;
         right: 7.5rem;
         top: .3125rem
+    }
+    #timeline-step-1:after {/*First Circle First half dots*/
+      content: "";
+      display: block;
+      border-top: .25rem dotted green;
+      width: 3.46rem;
+      position: absolute;
+      left: 7.5rem;
+      top: .3125rem
     }
 }
 
@@ -377,22 +376,97 @@ body{margin-top:20px;}
 }
 
 .timeline-steps .timeline-content .inner-circle {/*Inner Circle Color*/
-    border-radius: 1.5rem;
+    border-radius: 0; /*Square*/ /*1.5rem*/
     height: 1rem;
     width: 1rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: #3b82f6;
+    background-color: white;
 }
 
 .timeline-steps .timeline-content .inner-circle:before {/*Outer Circle Color*/
     content: "";
-    background-color: #3b82f6;
+    background-color: white;
     display: inline-block;
     height: 3rem;
     width: 3rem;
     min-width: 3rem;
-    border-radius: 6.25rem;
+    border-radius: 0; /*Square*/ /*6.25rem*/
     opacity: .5
 }
+
+.timeline-steps .timeline-content .first-circle {/*First Circle Inner Color*/
+  border-radius: 0; /*Square*/ /*1.5rem*/
+  height: 1rem;
+  width: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: green;
+}
+.timeline-steps .timeline-content .first-circle:before {/*First Circle Outer Color*/
+  content: "";
+  background-color: green;
+  display: inline-block;
+  height: 3rem;
+  width: 3rem;
+  min-width: 3rem;
+  border-radius: 0; /*Square*/ /*6.25rem*/
+  opacity: .5
+}
+/*Font*/
+body, a, h1, h2, p{ font-family: 'VT323', monospace; }
+
+/*Misc*/
+#header-image {
+  height: 75%;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }
+body {
+  background-color: black;
+}
+.member-info {
+  font-size:xx-large; color: black; font-weight: bolder;
+}
+h2 {
+  font-size: 3em; color: white;
+}
+p {
+  font-size: 1.5em;
+}
+a {
+  font-size: 1.3em;
+}
+span {
+  font-size: 1.3em;
+}
+
+/*4 mini images*/
+/* .minibiome-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.minibiome-box {
+  width: 50%;
+}
+.minibiome-box img {
+  height: calc(100% - 40px);
+  width: calc(100% - 40px);
+  margin: 20px;
+  border-radius: 10px;
+  background-color: white;
+} */
+
+.minibiome-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+#MiniBiome {
+  height: calc(100%);
+  width: calc(100%);
+  margin: 0;
+  border-radius: 10px;
+} 
